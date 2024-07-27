@@ -1,0 +1,23 @@
+.mainContainer {
+  @apply flex min-h-screen flex-col items-center justify-center pt-1;
+}
+
+.mainContainer > button {
+  @apply bg-cyan-700 mb-2 text-lime-50 rounded-md px-4 py-2 hover:shadow-md hover:bg-cyan-600 transition-all ease-in-out duration-300;
+}
+
+.gridContainer {
+  @apply grid grid-cols-25;
+}
+
+.gridItem {
+  @apply w-7 h-7 border-l border-t last-of-type:border-r border-cyan-500;
+}
+
+.borderRight {
+  @apply border-r;
+}
+
+.borderBottom {
+  @apply border-b;
+}
