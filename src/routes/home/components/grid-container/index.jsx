@@ -20,7 +20,7 @@ export function GridContainer({ randomLetters }) {
     let secondLetterRowStart = 13;
     let sedondLetterColStart = 15;
 
-    return grid.map((row, rowIdx) => {
+    return gridInitialState?.map((row, rowIdx) => {
       return row.map((cell, colIdx) => {
         if (
           rowIdx >= firstLetterRowStart &&
@@ -28,7 +28,7 @@ export function GridContainer({ randomLetters }) {
           colIdx >= firstLetterColStart &&
           colIdx < firstLetterColStart + patternCols
         ) {
-          return pattern1[rowIdx - firstLetterRowStart][
+          return pattern1[rowIdx - firstLetterRowStart]?.[
             colIdx - firstLetterColStart
           ] === 1
             ? true
@@ -40,7 +40,7 @@ export function GridContainer({ randomLetters }) {
           colIdx >= sedondLetterColStart &&
           colIdx < sedondLetterColStart + patternCols
         ) {
-          return pattern2[rowIdx - secondLetterRowStart][
+          return pattern2[rowIdx - secondLetterRowStart]?.[
             colIdx - sedondLetterColStart
           ] === 1
             ? true
